@@ -1,5 +1,5 @@
 
-<?php
+<?php/*
 $dbhost = 'localhost';
 $dbuser = 'cagdasca_user';
 $dbpass = '123asd';
@@ -14,7 +14,7 @@ if (!$conn) {
 
 $my_db = @mysql_select_db($db) or die('Unable to select database' . mysql_error());
 
-
+*/
 
 ?>
 
@@ -22,6 +22,7 @@ $my_db = @mysql_select_db($db) or die('Unable to select database' . mysql_error(
 	<head>
 		<title>Teknocraft</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
+
 	</head>
 	<body>
 		<div id="main">
