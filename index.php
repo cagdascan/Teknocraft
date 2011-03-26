@@ -1,17 +1,21 @@
 
 <?php
-/*$dbhost = 'localhost';
+$dbhost = 'localhost';
 $dbuser = 'cagdasca_user';
 $dppass = '123asd';
-$db = 'cagdasca_teknocraft'
+$db = 'cagdasca_teknocraft';
 
-$dbh = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to connect to MySQL server");
-$my_db = @mysql_select_db($db) or die("Unable to select database");
 
-function test(){
-echo "benim adim dunya";
+$conn = mysql_connect($dbhost, $dbuser, $dbpass);// or die("Unable to connect to MySQL server");
+if (!$conn) {
+    die('Couldnt connect: ' . mysql_error());
 }
-*/
+echo 'Connection established';
+
+$my_db = @mysql_select_db($db) or die('Unable to select database' . mysql_error());
+
+
+
 ?>
 
 <html>
@@ -39,7 +43,7 @@ echo "benim adim dunya";
 				Post1</br>
 				Lvorem Ipsum is simply dummy text of the printing and typesetting indu				stry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 			</div>
-			<div id="footer">Footer</div>
+			<div id="footer">Footer <?php echo 'RRR'; ?></div>
 		</div>
 	</body>
 </html>
