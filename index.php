@@ -10,4 +10,5 @@ $my_db = @mysql_select_db($db) or die("Unable to select database");
 function test(){
 echo "benim adim dunya";
 }
+
 ?>
