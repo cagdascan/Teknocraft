@@ -10,7 +10,7 @@ $conn = mysql_connect($dbhost, $dbuser, $dbpass);// or die("Unable to connect to
 if (!$conn) {
     die('Couldnt connect: ' . mysql_error());
 }
-echo 'Connection established';
+//echo 'Connection established';
 
 $my_db = @mysql_select_db($db) or die('Unable to select database' . mysql_error());
 
