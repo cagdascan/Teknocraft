@@ -25,7 +25,7 @@ include 'mainConnect.php';
 	<body>
 		<div id="main">
 			<div id="login"> <?php logged(); ?>
-				<form name="input" action="posta.php" method="post">
+				<form name="input" action="girisKontrol.php" method="post">
 					username:<input type="text" name="un" />
 					password:<input type="password" name=pw" />	
 					<input type="submit" value="login" /></br>
