@@ -2,7 +2,7 @@
 <?php
 $dbhost = 'localhost';
 $dbuser = 'cagdasca_user';
-$dppass = '123asd';
+$dbpass = '123asd';
 $db = 'cagdasca_teknocraft';
 
 
