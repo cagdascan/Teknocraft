@@ -1,20 +1,18 @@
+<?php
+session_start();
 
-<?php/*
-$dbhost = 'localhost';
-$dbuser = 'cagdasca_user';
-$dbpass = '123asd';
-$db = 'cagdasca_teknocraft';
-
-
-$conn = mysql_connect($dbhost, $dbuser, $dbpass);// or die("Unable to connect to MySQL server");
-if (!$conn) {
-    die('Couldnt connect: ' . mysql_error());
+function logged();{
+if(!session_is_registered(meUser)){
+    $loginOn = 1;
 }
-//echo 'Connection established';
+else{
+    $loginOn = 0;
+}
+echo $loginOn;
+}
 
-$my_db = @mysql_select_db($db) or die('Unable to select database' . mysql_error());
-
-*/
+//to connect to db through server
+include 'mainConnect.php';
 
 ?>
 
@@ -26,7 +24,7 @@ $my_db = @mysql_select_db($db) or die('Unable to select database' . mysql_error(
 	</head>
 	<body>
 		<div id="main">
-			<div id="login">
+			<div id="login"> <?php logged(); ?>
 				<form name="input" action="posta.php" method="post">
 					username:<input type="text" name="un" />
 					password:<input type="password" name=pw" />	
