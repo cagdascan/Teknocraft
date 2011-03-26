@@ -1,16 +1,19 @@
 
 <?php
 $dbhost = 'localhost';
-$dbuser = 'cagdasca_user';
-$dppass = '123asd';
+$dbuser = 'root';//cagdasca_user';
+$dbpass = '49493513';//'123asd';
 $db = 'cagdasca_teknocraft';
 
 
 $conn = mysql_connect($dbhost, $dbuser, $dbpass);// or die("Unable to connect to MySQL server");
+//$conn = mysql_connect('localhost','root','49493513');//$dbhost, $dbuser, $dbpass);// or die("Unable to connect to MySQL server");
+
+
 if (!$conn) {
     die('Couldnt connect: ' . mysql_error());
 }
-echo 'Connection established';
+//echo 'Connection established';
 
 $my_db = @mysql_select_db($db) or die('Unable to select database' . mysql_error());
 

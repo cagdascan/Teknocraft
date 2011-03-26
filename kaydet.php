@@ -1,14 +1,25 @@
 <?php
-/*$dbhost = 'localhost';
+$dbhost = 'localhost';
 $dbuser = 'root';//cagdasca_user';
 $dbpass = '49493513';//'123asd';
 $db = 'cagdasca_teknocraft';
+
+
+
+
+$un = $_POST['un'];
+$pw = $_POST['pw'];
+$ep = $_POST['ep'];
+
+
+
+//$conn = mysql_connect($dbhost, $dbuser, $dbpass);// or die("Unable to connect to MySQL server");
 
 $conn = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to connect to MySQL server");
 $vt = mysql_select_db($db) or die("db error");
 
 $quer = mysql_query("INSERT INTO users VALUES('','$un', '$pw', '$ep')");
-echo "<p>new user has been created</p>"*/
+echo "<p>new user has been created</p>"
 ?>
 
 <html>
@@ -28,7 +39,7 @@ echo "<p>new user has been created</p>"*/
 				</div>
 			</div>
 			<div id="signup">
-				<form name="input" action="kaydet.php" method="post">
+				<form name="input" action="signup.php" method="get">
 					<table>
 						<tr>
 							<td>username:</td>
